@@ -1,4 +1,4 @@
-var DB= require('index');
+var DB= require('../../models/users');
 
 var createUser = function (req, res) {
     var nombre = req.body.nombre;
