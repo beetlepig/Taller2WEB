@@ -118,7 +118,7 @@ body {
     top: 75%;
     left: 50%;
     margin-left: -15%;
-    background-color: rgba(128,36,223,0.9);
+    background-color: rgba(128,36,223,1);
     color: white;
     font-weight: 300;
     font-size: 1.2vw;
@@ -134,5 +134,33 @@ body {
     margin-top: -2%;
     background: url("../../images/dibujo.svg") no-repeat center;
     background-size: contain;
+}
 
+.verMasPullDown {
+    position: absolute;
+    background-color: rgba(231,174,46,0.9);
+    top:60%;
+    left: 8.2%;
+    height: 5%;
+    width: 32%;
+}
+
+.verMasPullDown h5 {
+    position: absolute;
+    top: 25%;
+    margin-top: -1%;
+    left: 5%;
+    font-size: 1.5vw;
+    font-weight: normal;
+    color: white;
+}
+
+.verMasPullDown div  {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    color: white;
+    font-size: 4vw;
+    left: 85%;
+    top: -50%;
 }
