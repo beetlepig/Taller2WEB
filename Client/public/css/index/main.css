@@ -1,23 +1,27 @@
-html {
-    height: 100%;
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&subset=latin-ext');
 
-}
+
 body {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
     height: 100%;
+    width: 100%;
     padding: 0;
     margin: 0;
+
 }
 
 
 
 .SuperiorZone {
 
-    height: 30%;
+    height: 25%;
     min-height: 150px;
     background-color: rgba(0,149,135,1);
     margin: 0;
-    padding-left: 0.2%;
-    padding-right: 0.2%;
+    padding-left: 0.3%;
+    padding-right: 0.3%;
+    padding-top: 2%;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -25,10 +29,9 @@ body {
 
 #logo {
 
-    margin-top: 5%;
+    padding: 0;
     height: 90%;
     width: 32%;
-
     background: url("../../images/logo.svg") no-repeat center;
     background-size: contain;
 }
@@ -39,4 +42,97 @@ body {
     margin: 0;
     text-align: center;
     color: white;
+}
+
+.divLema h2 {
+    font-weight: lighter;
+    font-size: 2.1vw;
+    margin: 0;
+
+
+}
+
+.divLema h3 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1.9vw;
+}
+
+.loginBox {
+    text-align: center;
+    position: absolute;
+    left: 8.1%;
+    width: 32%;
+    height: 25%;
+    margin-top: 1%;
+    padding: 0;
+
+}
+
+.loginBox h4 {
+    font-size: 1.7vw;
+    font-weight: lighter;
+    margin: 5%;
+}
+
+.loginBox ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-bottom: 7%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 18%;
+
+
+}
+
+.loginBox ul li{
+    width: 46%;
+    min-width: 200px;
+    padding: 0;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    height: 100%;
+
+}
+
+.loginBox ul li input {
+    background-color: rgba(0,0,0,0.05);
+    border-style: none;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    padding-left: 5%;
+    font-weight: bold;
+    color: rgba(0,0,0,0.5);
+
+}
+
+.loginBox button {
+    position: absolute;
+    border-style: none;
+    border-radius: 5px;
+    height: 15%;
+    width: 30%;
+    top: 75%;
+    left: 50%;
+    margin-left: -15%;
+    background-color: rgba(128,36,223,0.9);
+    color: white;
+    font-weight: 300;
+    font-size: 1.2vw;
+    box-shadow: 1px 1px 2px #888888;
+}
+
+.imagenMANOLOGO {
+    background-color: #00B7FF;
+    height: 75%;
+    width: 32%;
+    position: absolute;
+    left: 60%;
+    margin-top: -2%;
+    background: url("../../images/dibujo.svg") no-repeat center;
+    background-size: contain;
+
 }
