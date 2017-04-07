@@ -1,8 +1,8 @@
-var express = require('express');
+let express = require('express');
 
-var users = require('../controllers/users/index');
+let users = require('../controllers/users/index');
 
-var router = express.Router();
+let router = express.Router();
 
 
 router.get('/users',users.getUsers);

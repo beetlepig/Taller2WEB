@@ -1,10 +1,10 @@
-var DB= require('../../models/users');
+let DB= require('../../models/users');
 
-var createUser = function (req, res) {
-    var nombre = req.body.nombre;
-    var nickname = req.body.nickname;
-    var pass = req.body.pass;
-    var correo = req.body.correo;
+let createUser = function (req, res) {
+    let nombre = req.body.nombre;
+    let nickname = req.body.nickname;
+    let pass = req.body.pass;
+    let correo = req.body.correo;
 
     DB.create(nombre, nickname, pass, correo, function(err, result) {
             if (err) {
@@ -19,7 +19,7 @@ var createUser = function (req, res) {
 
 
 
-var getUsers = function (req, res) {
+let getUsers = function (req, res) {
     DB.getAll(function(error, users) {
         if (!error) {
             res.status(200).json(users);

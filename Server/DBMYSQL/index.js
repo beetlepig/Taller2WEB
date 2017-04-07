@@ -1,8 +1,8 @@
 
-var mysql = require('mysql');
+let mysql = require('mysql');
 //var async = require('async');
 
-var pool=mysql.createPool({
+let pool=mysql.createPool({
                               host: '200.3.193.22',
                               user: 'P09652_1_9',
                               password: 'mQ9YZPGe',
