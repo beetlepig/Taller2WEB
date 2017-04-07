@@ -9,6 +9,7 @@ var createUser = function (req, res) {
     DB.create(nombre, nickname, pass, correo, function(err, result) {
             if (err) {
                 res.status(500).json(err);
+                console.log(err);
             }else {
                 res.status(200).json(result);
             }
@@ -19,12 +20,12 @@ var createUser = function (req, res) {
 
 
 var getUsers = function (req, res) {
-    DB.getAll(function(error, photos) {
+    DB.getAll(function(error, users) {
         if (!error) {
-            res.status(200).json(photos);
+            res.status(200).json(users);
         } else {
-
-            res.json(500,error);
+            res.status(500).json(error);
+            console.log(error);
         }
     });
 };

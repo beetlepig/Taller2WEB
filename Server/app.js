@@ -17,9 +17,9 @@ var app = express();
 
 app.use(cors());
 
-
+/*
 function _inicializeModels () {
-   dbsql.connect(function (err) {
+   dbsql.connectar(function (err) {
        if(err){
            console.log('Unable to connect to MySQL.');
            process.exit(1)
@@ -30,7 +30,7 @@ function _inicializeModels () {
 }
 
 _inicializeModels();
-
+*/
 
 
 // view engine setup

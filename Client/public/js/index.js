@@ -38,7 +38,8 @@ function encontrarUsuario(usuario) {
 
   //  console.log(values.correo, + " "+ values.pass);
 
-    getUsers().done(function (data) {
+    getUsers().done(function (data,a,status) {
+        console.log(status.status);
         if (data===null){
             err="problema con la db";
             usuariorel=null;
@@ -74,6 +75,7 @@ function getUsers() {
     return $.ajax({
                       url: "http://localhost:3000/api/users",
                       type: "get"
+
     });
 }
 
