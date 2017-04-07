@@ -10,10 +10,12 @@ var routes = require('./routes/index');
 
 var dbsql = require('./DBMYSQL/index');
 
+var cors = require('cors');
+
 
 var app = express();
 
-
+app.use(cors());
 
 
 function _inicializeModels () {

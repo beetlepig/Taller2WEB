@@ -21,12 +21,12 @@
 </header>
 
 
-<div class="loginBox">
+<form action="/" method="get" class="loginBox" id="loginForm">
     <h4>Iniciar Sesión</h4>
     <ul>
         <li>
             <label for="emailInput" style="display: none;">User</label>
-            <input type="email" id="emailInput" placeholder="Email">
+            <input type="email" id="emailInput" placeholder="Email" name="nombresote">
 
         </li>
         <li>
@@ -34,14 +34,26 @@
             <input type="password" id="passInput" placeholder="Password">
         </li>
     </ul>
-    <button id="loginButton">Continuar</button>
-</div>
-
+    <button id="loginButton" type="submit">Continuar</button>
+    <div id="mensajeError"><p></p></div>
+</form>
+<div class="dropwdown">
 <div class="verMasPullDown">
     <h5>Que es SocialPlane</h5>
-    <div class="icon-up-open"></div>
+    <div onclick="dropDown()" id="arrow"></div>
+</div>
+    <div id="myDropdown" class="dropdown-content">
+        <P>Es una red social crowdfunding con
+            la particularidad de que podras
+            financiar proyectos y postear tus propios
+            proyectos de una forma mas abierta y sencilla.</P>
+    </div>
 </div>
 
+<ul id="listaLinks">
+    <li><a href="./registro.html">No tienes cuenta?</a></li>
+    <li><a href="./info.html">Más información</a></li>
+</ul>
 
 <div class="imagenMANOLOGO"></div>
 

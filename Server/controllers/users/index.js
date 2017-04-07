@@ -21,7 +21,7 @@ var createUser = function (req, res) {
 var getUsers = function (req, res) {
     DB.getAll(function(error, photos) {
         if (!error) {
-            res.json(200,photos);
+            res.status(200).json(photos);
         } else {
 
             res.json(500,error);
