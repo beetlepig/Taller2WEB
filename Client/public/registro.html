@@ -19,11 +19,53 @@
 
 </div>
 
-<div id="imgButton">
-   <div class="imgPhoto">
+<div id="imgPhoto">
+   <label class="imgButton" for="uploadID" id="displayIMG">
 
-   </div>
+   </label>
+
+    <input type="file" id="uploadID" name="profilePic" accept="image/x-png,image/gif,image/jpeg">
 </div>
 
+<div class="listaRegistro">
+    <form action="/" method="post" id="registroFrom" enctype="multipart/form-data">
+    <ul>
+        <li>
+            <input type="text" placeholder="Nombre Del Usuario" name="nickname" required>
+        </li>
+        <li>
+            <input type="text" placeholder="Nombre(s)" name="nombre" required>
+        </li>
+        <li>
+            <input type="text" placeholder="Apellidos(s)" name="apellido" required>
+        </li>
+        <li>
+            <input type="email" placeholder="Correo Electronico" name="correo" required>
+        </li>
+        <li>
+            <input type="password" placeholder="Contraseña" name="pass" required>
+        </li>
+    </ul>
+    <div class="divCheckbox">
+    <input type="checkbox" id="terminos" required>
+    <label for="terminos">Acepto los <a href="#">terminos del servicio</a></label>
+    </div>
+    <button type="submit" value="Enviar">Registrarse</button>
+    </form>
+</div>
+
+
+
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+</script>
+
+
+
+
+<!-- Hacer los llamados los scripts locales -->
+<script src="js/registro.js" type="text/javascript"></script>
 </body>
 </html>

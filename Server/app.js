@@ -4,6 +4,8 @@ let favicon = require('serve-favicon');
 let logger = require('morgan');
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
+let multer = require('multer');
+let userUpload=multer({dest : '../temp/uploads/'}).single('profilePic');
 
 let routes = require('./routes/index');
 
@@ -46,8 +48,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-    app.use('/api', routes);
-
+    app.use('/api',userUpload, routes);
 
 
 // catch 404 and forward to error handler
