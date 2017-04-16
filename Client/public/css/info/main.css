@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&subset=latin-ext');
+
+
+body {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+.SuperiorZone {
+    position: fixed;
+    z-index: 10;
+    height: 10%;
+    width: 100%;
+    min-height: 50px;
+    background-color: rgba(0,149,135,1);
+    margin: 0;
+    padding-left: 0.3%;
+    padding-right: 0.3%;
+    padding-top: 1%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+#logo {
+
+    padding: 0;
+    margin: 0;
+    height: 80%;
+    width: 32%;
+    background: url("../../images/logo-02.svg") no-repeat center / contain;
+
+}
+
+.divLema {
+    width: 48%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+.divLema h1 {
+    font-weight: bold;
+    font-size: 2.7vw;
+    margin: 0;
+}
+
+.texto {
+    margin-left: 24%;
+    margin-top: 10%;
+    width: 40%;
+    padding: 0;
+    font-size: 1.5vw;
+    font-weight: lighter;
+}
+
+.botonsote {
+    margin-left: 24%;
+    width: 16%;
+    margin-top: 3%;
+    height: 4%;
+    margin-bottom: 5%;
+    border-style: none;
+    background-color: rgba(128,36,233,1);
+    border-radius: 6px;
+    color: white;
+    font-weight: normal;
+    font-size: 1vw;
+}

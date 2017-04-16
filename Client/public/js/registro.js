@@ -17,7 +17,7 @@ $(document).ready(function(){
          */
         createPhoto().done(function(data){
             if(data!==null){
-              //  window.location.replace('/');
+                window.location.replace('./info.html');
             }
         });
 
