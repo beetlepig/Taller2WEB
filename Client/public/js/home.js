@@ -4,8 +4,17 @@
 let activado=false;
 let animado=false;
 let animadoDos=false;
-$(document).ready(function(){
 
+$(document).ready(function(){
+    let Img= $('.imgprofile');
+    if(!sessionStorage.datos){
+        window.location.replace('./index.html');
+    } else {
+      let  url= "http://localhost:3000/Users/"+JSON.parse(sessionStorage.datos).profilePic;
+      Img.css("background",'url('+url+') no-repeat center / cover');
+
+        console.log("entro: " +url)
+    }
 
 
     $('#logo').hover( function () {
@@ -42,7 +51,7 @@ $(document).ready(function(){
                                                                        opacity: '1',
                                                                        display: 'inline-block'
 
-                                                                   }, 600);
+                                                                   }, 400);
                                                });
 
                                                $("#unCuhete").show(10, function () {
@@ -50,16 +59,16 @@ $(document).ready(function(){
                                                                        opacity: '1',
                                                                        display: 'inline-block'
 
-                                                                   }, 900);
+                                                                   }, 500);
                                                });
                                                $(".divProfile").show(10, function () {
                                                    $(this).animate({
                                                                        opacity: '1',
                                                                        display: 'inline-block'
 
-                                                                   }, 1200);
+                                                                   }, 600);
                                                });
-                                               let Img= $('.imgprofile');
+
 
                                                Img.width(Img.height());
                                                Img.css("margin-left","-"+Img.width()/2+"px");
@@ -102,7 +111,7 @@ $(document).ready(function(){
 
             $(".divProfile").animate({
                                        opacity: '0'
-                                   }, 200, function () {
+                                   }, 100, function () {
             });
 
         $('.SuperiorZone').animate({
@@ -130,7 +139,10 @@ $(document).ready(function(){
 
 
 
-
+function cerrarSesion() {
+    sessionStorage.removeItem("datos");
+    window.location.replace('./index.html');
+}
 
 
 

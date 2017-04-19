@@ -26,7 +26,7 @@ exports.getAll = function(done) {
         if (err){
             connection.release();
             console.log(err);
-            return done(err);
+            return done(err,null);
         } else {
             connection.query('SELECT * FROM usuarios', function (err, rows)  {
                 if (err)
