@@ -1,0 +1,24 @@
+.contenedor{
+    background-color: rgba(250,250,250 ,1);
+    width: 100%;
+
+}
+
+.articulos {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    left: 5%;
+/*    background-color: cornsilk; */
+    width: 90%;
+
+}
+
+.articulo{
+    margin-bottom: 4vh;
+    width: 100%;
+    height: 40vh;
+    background-color: rgba(240,240,240 ,1);
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
