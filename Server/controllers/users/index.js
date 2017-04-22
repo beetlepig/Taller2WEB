@@ -124,6 +124,8 @@ function comprobarUsuario(usuario) {
         usuario(err,usuariorel);
     });
 }
+
+
  module.exports = {
      createUser,
      getUsers

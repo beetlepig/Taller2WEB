@@ -130,12 +130,51 @@ $(document).ready(function(){
     });
 
 
+    getPosts().done(function(data){
+        if(data!==null){
+            //console.log(data);
+            let articulosPosts = $(".articulos");
+            $.each(data, function(index, value){
+                let article = $("<div>", {"class": "articulo"});
+                let photo = $("<div>", {"class": "imgProyecto","style": "background: url("+"'"+  value.imgsrc  + "'"+") no-repeat center / cover"});
+                let image = $("<img>", {"src":value.photo_path, "class":"card-image img-responsive"});
+                let author = $("<span>"+value.author+"</span>").addClass("card-author lead clearfix");
+                let place = $("<span>"+value.place+"</span>").addClass("card-place");
+
+
+                photo.append(image);
+                photo.append(author);
+                photo.append(place);
+                column.append(photo)
+                gallery.append(column);
+            });
+        }
+    });
+
+
 
 });
 
 
+function getPosts() {
+    return $.ajax({
+                      url: "http://localhost:3000/api/posts",
+                      type: "get"
+                  });
+}
 
 
+
+$('.lonegro').hover(function () {
+    $(this).css('background','linear-gradient(transparent, rgba(0,0,0,0.9))');
+
+
+
+},function () {
+
+    $(this).css('background','transparent');
+
+});
 
 
 

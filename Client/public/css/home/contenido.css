@@ -15,10 +15,69 @@
 
 }
 
+@keyframes shadowThrob {
+    from {box-shadow: 0 0 1px rgba(0,0,0,0.6);}
+    to {box-shadow: 0 0 7px rgba(0,0,0,0.6);}
+
+}
+
+@keyframes principio {
+    from {box-shadow: 0 0 7px rgba(0,0,0,0.6);}
+    to {box-shadow: 0 0 1px rgba(0,0,0,0.6);}
+}
+
 .articulo{
     margin-bottom: 4vh;
     width: 100%;
     height: 40vh;
-    background-color: rgba(240,240,240 ,1);
-    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    background-color: rgba(246,246,246 ,1);
+    animation: principio 0.5s;
+    box-shadow: 0 0 2px rgba(0,0,0,0.6);;
+    display: flex;
+}
+
+.articulo:hover{
+    animation: shadowThrob 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.articulo .lonegro {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+
+}
+
+.articulo .imgProyecto {
+    width: 40%;
+    height: 100%;
+    background: url('../../images/imagen_prueba-18.png') no-repeat center / cover;
+
+
+}
+
+.articulo .contenidoProyecto {
+    height: 96%;
+    width: 56%;
+    padding: 2%;
+
+}
+
+.articulo .contenidoProyecto h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+.articulo .contenidoProyecto h4{
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.2vw;
+    color: rgba(0,0,0,0.6);
+}
+
+.articulo .contenidoProyecto h5{
+    text-align: left;
+    font-weight: lighter;
+    font-size: 1.1vw;
 }
