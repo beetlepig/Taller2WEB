@@ -4,6 +4,7 @@
 let activado=false;
 let animado=false;
 let animadoDos=false;
+let lonegrin= $(".lonegro");
 
 $(document).ready(function(){
     let Img= $('.imgprofile');
@@ -135,18 +136,36 @@ $(document).ready(function(){
             //console.log(data);
             let articulosPosts = $(".articulos");
             $.each(data, function(index, value){
-                let article = $("<div>", {"class": "articulo"});
-                let photo = $("<div>", {"class": "imgProyecto","style": "background: url("+"'"+  value.imgsrc  + "'"+") no-repeat center / cover"});
-                let image = $("<img>", {"src":value.photo_path, "class":"card-image img-responsive"});
-                let author = $("<span>"+value.author+"</span>").addClass("card-author lead clearfix");
-                let place = $("<span>"+value.place+"</span>").addClass("card-place");
+                let article = $("<article>", {"class": "articulo"});
+                let photo = $("<div>", {"style": "background: url("+"'"+"http://localhost:3000/"+  value.imgsrc  + "'"+") no-repeat center / cover"}).addClass("imgProyecto");
+                let negro = $("<div>", {"class":"lonegro"});
+                let contenidoProyecto = $("<div>",{"class": "contenidoProyecto"});
+                let titulo= $("<h3>"+value.titulo+"</h3>");
+                let subtitulo = $("<h4>"+value.subtitulo+"</h4>");
+                let contenido = $("<h5>"+value.contenido+"</h5>");
 
 
-                photo.append(image);
-                photo.append(author);
-                photo.append(place);
-                column.append(photo)
-                gallery.append(column);
+                contenidoProyecto.append(titulo);
+                contenidoProyecto.append(subtitulo);
+                contenidoProyecto.append(contenido);
+                photo.append(negro);
+                article.append(photo);
+                article.append(contenidoProyecto);
+                articulosPosts.prepend(article);
+
+
+            });
+
+
+            $(".lonegro").hover(function () {
+                console.log("entrolonegroniggga");
+
+
+
+            },function () {
+
+                console.log("saliolonegroniggga");
+
             });
         }
     });
@@ -165,16 +184,6 @@ function getPosts() {
 
 
 
-$('.lonegro').hover(function () {
-    $(this).css('background','linear-gradient(transparent, rgba(0,0,0,0.9))');
-
-
-
-},function () {
-
-    $(this).css('background','transparent');
-
-});
 
 
 
