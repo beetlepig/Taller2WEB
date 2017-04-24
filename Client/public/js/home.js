@@ -240,6 +240,7 @@ $('#subtituloArea').autoresize();
 
 $('.imgProyectoCrear').click(function () {
     document.getElementById('uploadID').click();
+   // $('#uploadID').trigger('click');
 });
 
 
@@ -261,6 +262,12 @@ function readURL(){
     }else{
         uploaded = false;
     }
+}
+
+
+
+function enviarFrom() {
+    console.log("enviamelo papu")
 }
 
 
