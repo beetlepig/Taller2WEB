@@ -15,6 +15,9 @@
 
     <input type="text" placeholder="Buscar" class="buscar" id="searchbox">
     <div class="plus_add" id="pluz"></div>
+
+
+
     <div class="cuhete" id="unCuhete">
         <div class="cuheteIMG"></div>
         <p>Explorar</p>
@@ -22,10 +25,18 @@
     <div class="divProfile" onclick="cerrarSesion()">
         <div class="imgprofile"></div>
     </div>
+
+
 </header>
 
+
+
+
 <div class="contenedor">
+
     <section class="articulos">
+
+        <!--
         <article class="articulo">
             <div class="imgProyecto">
 
@@ -40,17 +51,49 @@
                 <h5>3D printers are amazing. Unfortunately, they used to be hulking, complicated, expensive, and with limited functions. We’ve been hearing about and experiencing the pain of setting up the difficult-to-use DIY 3D printer kit and being limited by the standard plug-and-play 3D printer. We are hoping to change that.</h5>
             </div>
         </article>
-
+-->
     </section>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Crear Un Proyecto</h2>
+            </div>
+            <article class="articuloCrear">
+                <div class="imgProyectoCrear" id="displayImg">
+
+
+                    <input type="file" id="uploadID" name="profilePic" accept="image/x-png,image/gif,image/jpeg">
+                </div>
+
+                <div class="contenidoProyectoCrear">
+                    <input class="inputTitulo" type="text" placeholder="Titulo del proyecto" maxlength="25">
+                    <textarea name="subtitulo" id="subtituloArea"  maxlength="100" placeholder="subtitulo para tu proyecto"></textarea>
+                    <textarea name="contenido" id="contenidoArea"  maxlength="350" placeholder="Descripcion de tu proyecto"></textarea>
+                </div>
+            </article>
+            <div class="modal-footer">
+                <h3>Modal Footer</h3>
+            </div>
+        </div>
+    </div>
 
 </div>
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
-<script src="//cdn.jsdelivr.net/jquery.shadow-animation/1/mainfile"></script>
+
+
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="js/lib/jquery.textarea.autoresize.js"></script>
+
 
 
 

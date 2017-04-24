@@ -67,15 +67,6 @@ body {
  /*  background-color: gray; */
 }
 
-.imgButton {
-    position: absolute;
-    width: 67%;
-    height: 67%;
-    left: 17%;
-    top: 0;
-    background: url("../../images/photobutton.svg") no-repeat center / contain;
-    cursor: pointer;
-}
 
 #uploadID {
     display: none;
