@@ -4,9 +4,11 @@
 let activado=false;
 let animado=false;
 let animadoDos=false;
-let lonegrin= $(".lonegro");
+let id_usu;
+
 
 $(document).ready(function(){
+    id_usu= JSON.parse(sessionStorage.datos).correo;
     let Img= $('.imgprofile');
     if(!sessionStorage.datos){
         window.location.replace('./index.html');
@@ -267,7 +269,35 @@ function readURL(){
 
 
 function enviarFrom() {
-    console.log("enviamelo papu")
+    console.log("enviamelo papu");
+    let file = document.getElementById("uploadID").files[0];
+    let input =document.getElementById("uploadID");
+    let titulo= $('.inputTitulo').val();
+    let subtitulo= $('#subtituloArea').val();
+    let contenido= $('#contenidoArea').val();
+    let formdata= new FormData();
+    id_usuario= id_usu;
+
+    formdata.append("id_usuario",id_usuario);
+    formdata.append(input.name, file);
+    formdata.append('titulo',titulo);
+    formdata.append('subtitulo',subtitulo);
+    formdata.append('contenido', contenido);
+
+    for (let pair of formdata.entries()) {
+        console.log(pair[0]+ ', ' + pair[1]);
+    }
+}
+
+
+function createPost() {
+    return $.ajax({
+        url: "http://localhost:3000/api/posts/create",
+        type: "post",
+        contentType: false,
+        processData: false,
+        data: formData
+    });
 }
 
 

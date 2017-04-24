@@ -15,6 +15,8 @@ router.post('/users/create',users.createUser);
 
 router.get('/posts', posts.getPosts);
 
+router.post('/posts/create', posts.createPosts());
+
 
 
 

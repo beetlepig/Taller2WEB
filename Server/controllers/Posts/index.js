@@ -16,8 +16,13 @@ function getPosts(req, res) {
     });
 }
 
+function createPosts() {
+
+}
+
 
 
 module.exports = {
-    getPosts
+    getPosts,
+    createPosts
 };
