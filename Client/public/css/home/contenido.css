@@ -59,6 +59,15 @@
 
 }
 
+.articulo .lonegro .recaudacion {
+    float: left;
+    color: white;
+    margin-top: 45%;
+    margin-left: 5%;
+    font-size: 1.2vw;
+    font-weight: lighter;
+}
+
 @keyframes blacklayer {
      from { opacity: 0;}
      to { opacity: 1;}

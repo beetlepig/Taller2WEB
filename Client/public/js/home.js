@@ -145,11 +145,13 @@ $(document).ready(function(){
                 let titulo= $("<h3>"+value.titulo+"</h3>");
                 let subtitulo = $("<h4>"+value.subtitulo+"</h4>");
                 let contenido = $("<h5>"+value.contenido+"</h5>");
+                let recaudacion= $("<p>"+value.current+"/"+value.target+"<br>Recaudados"+"</p>").addClass("recaudacion");
 
 
                 contenidoProyecto.append(titulo);
                 contenidoProyecto.append(subtitulo);
                 contenidoProyecto.append(contenido);
+                negro.append(recaudacion);
                 photo.append(negro);
                 article.append(photo);
                 article.append(contenidoProyecto);
