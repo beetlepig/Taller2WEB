@@ -7,6 +7,7 @@ let bodyParser = require('body-parser');
 let multer = require('multer');
 let userUpload=multer({dest : '../temp/uploads/'}).single('profilePic');
 
+
 let routes = require('./routes/index');
 
 

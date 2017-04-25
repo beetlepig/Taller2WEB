@@ -8,12 +8,12 @@ let id_usu;
 
 
 $(document).ready(function(){
-    id_usu= JSON.parse(sessionStorage.datos).correo;
     let Img= $('.imgprofile');
     if(!sessionStorage.datos){
         window.location.replace('./index.html');
     } else {
       let  url= "http://localhost:3000/Users/"+JSON.parse(sessionStorage.datos).profilePic;
+        id_usu= JSON.parse(sessionStorage.datos).correo;
       Img.css("background",'url('+url+') no-repeat center / cover');
 
         console.log("entro: " +url)
@@ -139,7 +139,7 @@ $(document).ready(function(){
             let articulosPosts = $(".articulos");
             $.each(data, function(index, value){
                 let article = $("<article>", {"class": "articulo"});
-                let photo = $("<div>", {"style": "background: url("+"'"+"http://localhost:3000/"+  value.imgsrc  + "'"+") no-repeat center / cover"}).addClass("imgProyecto");
+                let photo = $("<div>", {"style": "background: url("+"'"+"http://localhost:3000/Posts/"+  value.imgsrc  + "'"+") no-repeat center / cover"}).addClass("imgProyecto");
                 let negro = $("<div>", {"class":"lonegro"});
                 let contenidoProyecto = $("<div>",{"class": "contenidoProyecto"});
                 let titulo= $("<h3>"+value.titulo+"</h3>");
@@ -287,10 +287,23 @@ function enviarFrom() {
     for (let pair of formdata.entries()) {
         console.log(pair[0]+ ', ' + pair[1]);
     }
+
+    createPost(formdata).always(function (data,status) {
+        console.log(status);
+        if (status === 'success') {
+            console.log(data);
+
+
+            window.location.replace('./home.html');
+        } else if (status === "error") {
+            console.log(data);
+
+        }
+    });
 }
 
 
-function createPost() {
+function createPost(formData) {
     return $.ajax({
         url: "http://localhost:3000/api/posts/create",
         type: "post",
