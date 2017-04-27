@@ -74,8 +74,22 @@ let createPosts = function (req, res) {
 };
 
 
+function setLike(req, res) {
+let id_usuario=req.body.id_usuario;
+let id_post=req.body.id_post;
+DB.setLike(id_usuario,id_post, function (err, result) {
+    if (err){
+        console.log(err)
+    }else {
+        console.log(result);
+    }
+});
+}
+
+
 
 module.exports = {
     getPosts,
-    createPosts
+    createPosts,
+    setLike
 };

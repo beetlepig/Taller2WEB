@@ -17,6 +17,8 @@ router.get('/posts', posts.getPosts);
 
 router.post('/posts/create', posts.createPosts);
 
+router.post('/like',posts.setLike);
+
 
 
 

@@ -68,6 +68,26 @@
     font-weight: lighter;
 }
 
+.likeDiv {
+    float: right;
+    margin-top: 45%;
+    margin-right: 5%;
+    background:url("../../images/like_si.svg") no-repeat center / contain;
+    width: 10%;
+    height: 15.5%;
+
+}
+
+.likeDiv:hover {
+    float: right;
+    margin-top: 45%;
+    margin-right: 5%;
+    background:url("../../images/like_no.svg") no-repeat center / contain;
+    width: 10%;
+    height: 15.5%;
+
+}
+
 @keyframes blacklayer {
      from { opacity: 0;}
      to { opacity: 1;}
@@ -323,4 +343,6 @@
 textarea {
     resize: none;
 }
+
+
 

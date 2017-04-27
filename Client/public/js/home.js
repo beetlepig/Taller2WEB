@@ -146,12 +146,16 @@ $(document).ready(function(){
                 let subtitulo = $("<h4>"+value.subtitulo+"</h4>");
                 let contenido = $("<h5>"+value.contenido+"</h5>");
                 let recaudacion= $("<p>"+value.current+"/"+value.target+"<br>Recaudados"+"</p>").addClass("recaudacion");
+                let like= $("<div>", {"class":"likeDiv"});
+                let idPost= $("<p style= display:none;>"+value.id_post+"</p>").addClass('idpostin');
 
 
                 contenidoProyecto.append(titulo);
                 contenidoProyecto.append(subtitulo);
                 contenidoProyecto.append(contenido);
                 negro.append(recaudacion);
+                negro.append(like);
+                negro.append(idPost);
                 photo.append(negro);
                 article.append(photo);
                 article.append(contenidoProyecto);
@@ -170,6 +174,19 @@ $(document).ready(function(){
 
                 console.log("saliolonegroniggga");
 
+            });
+
+            $('.likeDiv').click(function () {
+                let datita= new FormData();
+                let id_post= $('.idpostin').html();
+                datita.append("id_usuario",id_usu);
+                datita.append("id_post",id_post);
+
+                for (let pair of datita.entries()) {
+                    console.log(pair[0]+ ', ' + pair[1]);
+                }
+
+                sendLike(datita);
             });
         }
     });
@@ -248,6 +265,8 @@ $('.imgProyectoCrear').click(function () {
 });
 
 
+
+
 //--------------------mostrar foto-------------------
 document.getElementById('uploadID').addEventListener('change',readURL, true);
 
@@ -313,6 +332,16 @@ function createPost(formData) {
         processData: false,
         data: formData
     });
+}
+
+function sendLike(formData) {
+    return $.ajax({
+                      url: "http://localhost:3000/api/like",
+                      type: "post",
+                      contentType: false,
+                      processData: false,
+                      data: formData
+                  });
 }
 
 
