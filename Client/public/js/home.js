@@ -186,7 +186,9 @@ $(document).ready(function(){
                     console.log(pair[0]+ ', ' + pair[1]);
                 }
 
-                sendLike(datita);
+                sendLike(datita).done(function () {
+                    window.location.replace('./home.html');
+                });
             });
         }
     });

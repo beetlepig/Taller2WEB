@@ -79,9 +79,12 @@ let id_usuario=req.body.id_usuario;
 let id_post=req.body.id_post;
 DB.setLike(id_usuario,id_post, function (err, result) {
     if (err){
-        console.log(err)
+        console.log(err);
+        res.status(500).json(err);
     }else {
         console.log(result);
+        res.status(200).json(result);
+
     }
 });
 }

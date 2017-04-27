@@ -58,15 +58,14 @@ exports.setLike = function(id_usuario, id_post , done) {
                     return done(err,null);
                 } else {
 
-                    done(false, result);
+                  //  done(false, result);
 
 
                     connection.query('SELECT * FROM posts WHERE `id_post` = ?', values[1], function(err, result2) {
                         if (err) {
                             return done(err, null);
                         } else {
-                            done(false, result2);
-                            console.log("resultados: ",result2);
+                      //      done(false, result2);
                             let valuesDos= [(result2[0].current)+1,values[1]];
 
                             connection.query('UPDATE posts SET `current` = ? WHERE `id_post` = ?', valuesDos, function(err, result3) {
